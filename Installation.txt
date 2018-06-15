@@ -1,0 +1,9 @@
+Install:
+----------
+  sudo apt-get install brickos
+  sudo apt-get install brickos-doc
+
+Download legOS operating system to the RCX:
+-------------------------------------------------
+  sudo firmdl3 --tty=/dev/usb/legousbtower0 /usr/lib/brickos/brickOS.srec
+
