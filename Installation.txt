@@ -1,9 +1,24 @@
 Install:
 ----------
-  sudo apt-get install brickos
-  sudo apt-get install brickos-doc
+  $ sudo apt-get install brickos
+  $ sudo apt-get install brickos-doc
 
 Download legOS operating system to the RCX:
 -------------------------------------------------
-  sudo firmdl3 --tty=/dev/usb/legousbtower0 /usr/lib/brickos/brickOS.srec
+  $ sudo firmdl3 --tty=/dev/usb/legousbtower0 /usr/lib/brickos/brickOS.srec
 
+
+
+Build a demo program, download it the the RCX and run it
+-----------------------------------------------------------
+Example of the building and downloading demos.  We'll build the C language demos in the '~/programming/lego/rcx/brickos' directory within our home directory:
+
+  $ mkdir -p ~/programming/lego/rcx/brickos	# make our directory
+  $ cd ~/programming/lego/rcx/brickos		# cd to or new directory
+  $ cp /usr/share/doc/legos/examples/demo/* .	# copy files into directory
+  $ gzip -d *gz			# uncompress any compressed files
+  $ make all			# build the demos
+  $ dll helloworld.lx		# download helloworld demo to slot 0
+  $                               #  program slot 0 is default
+  $ dll -p1 rover.lx              # download rover to program slot 1
+  $
