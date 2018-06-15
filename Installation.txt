@@ -18,7 +18,7 @@ Example of the building and downloading demos.  We'll build the C language demos
   $ cp /usr/share/doc/legos/examples/demo/* .	# copy files into directory
   $ gzip -d *gz			# uncompress any compressed files
   $ make all			# build the demos
-  $ dll helloworld.lx		# download helloworld demo to slot 0
-  $                               #  program slot 0 is default
-  $ dll -p1 rover.lx              # download rover to program slot 1
+  $ sudo dll --tty=/dev/usb/legousbtower0 helloworld.lx		# download helloworld demo to program slot 1
+  $                               #  program slot 1 is default
+  $ sudo dll -p3 --tty=/dev/usb/legousbtower0 rover.lx              # download rover to program slot 3
   $
