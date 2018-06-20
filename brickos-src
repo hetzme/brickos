@@ -1,0 +1,5 @@
+.../brickos_src/brickos-0.9.0$ tar -xvf brickos-0.9.0.tar brickos-0.9.0/
+$cd brickos-0.9.0/
+$./configure 
+$ make depend
+$ make all
